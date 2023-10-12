@@ -1,0 +1,32 @@
+﻿Currency,通貨名,略称 Code,TTS,TTB,TTM
+US Dollar,米ドル,USD,149.66,147.66,148.66
+Euro,ユーロ,EUR,159.23,156.23,157.73
+Canadian Dollar,カナダ・ドル,CAD,111.05,107.85,109.45
+Pound Sterling,英ポンド,GBP,186.79,178.79,182.79
+Swiss Franc,スイス･フラン,CHF,165.26,163.46,164.36
+Danish Krone,デンマーク・クローネ,DKK,21.45,20.85,21.15
+Norwegian Krone,ノルウェー・クローネ,NOK,14.08,13.48,13.78
+Swedish Krona,スウェーデン・クローネ,SEK,14.09,13.29,13.69
+Australian Dollar,オーストラリア・ドル,AUD,97.72,93.72,95.72
+New Zealand Dollar,ニュージーランド・ドル,NZD,91.92,87.92,89.92
+Hong Kong Dollar,香港ドル,HKD,19.44,18.58,19.01
+Malaysian Ringgit,マレーシア・リンギット,MYR,unquoted,unquoted,unquoted
+Singapore Dollar,シンガポール・ドル,SGD,109.95,108.29,109.12
+Saudi Riyal,サウジ・リアル,SAR,40.50,38.90,39.70
+UAE Dirham,UAEディルハム,AED,41.22,39.86,40.54
+Yuan Renminbi,中国・人民元,CNY,20.70,20.10,20.40
+Baht,タイ・バーツ,THB,4.16,4.00,4.08
+Indian Rupee,インド・ルピー,INR,1.95,1.65,1.80
+Pakistan Rupee,パキスタン・ルピー,PKR,0.68,0.38,0.53
+Kuwaiti Dinar,クウェート・ディナール,KWD,489.88,473.88,481.88
+Qatari Rial,カタール・リヤル,QAR,41.51,40.15,40.83
+Indonesia Rupiah,インドネシア・ルピア,IDR,1.07,0.83,0.95
+Mexican Peso,メキシコ・ペソ,MXN,9.29,7.29,8.29
+Won,韓国ウォン,KRW,11.31,10.91,11.11
+Philippine Peso,フィリピン・ペソ,PHP,2.78,2.50,2.64
+Rand,南アフリカ･ランド,ZAR,9.32,6.32,7.82
+Czech Koruna,チェコ・コルナ,CZK,6.55,6.31,6.43
+Russian Ruble,ロシア・ルーブル,RUB,1.73,1.23,1.48
+Hungarian Forint,ハンガリー・フォリント,HUF,0.43,0.39,0.41
+Polish Zloty,ポーランド・ズロチ,PLN,35.98,33.58,34.78
+Turkish Lira,トルコ・リラ,TRY,7.87,2.87,5.37
