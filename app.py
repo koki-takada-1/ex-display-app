@@ -7,10 +7,13 @@ import pandas as pd
 import plotly.express as px
 from streamlit_modal import Modal
 import streamlit.components.v1 as components
+import scraper as sc
+
+sc = sc.Scraper()
 
 st.set_page_config(layout="wide")
 
-def main_page(rate,spread):
+def main_page(rate,spread,img):
     with st.container():
         st.markdown('### 最終更新日時：2023年10月11日 13時10分')
         st.markdown('## 米ドルTTS リアルタイムレート')
@@ -114,10 +117,14 @@ def sidebar_display():
             pass
 
 
+if 'sc' not in st.session_state:
+    st.session_state.sc = 'done_sc'
+    ex_info = sc.realtime_info()
+    st.session_state.tts = ex_info['tts']
+    st.session_state.spread = ex_info['spread']
+    st.session_state.img = sc.chart_img_get()
 
-
-spred = 149.12 - 148.62
-main_page(149.12,spred)
+main_page(st.session_state.tts,st.session_state.spread,st.session_state.img)
 sidebar_display()
 
 

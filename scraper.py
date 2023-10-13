@@ -37,6 +37,7 @@ class Scraper:
     def chart_img_get(self):
         # 画像のXPath
         RATE_IMG = '//*[@id="main"]/div[3]/p[2]/img'
+
         # 今月を含めた5カ月のチャート画像があるサイトにアクセス
         self.driver.get(self.CHARTIMG_URL)
         img_element = WebDriverWait(self.driver, 10).until(lambda x: x.find_element(By.XPATH, RATE_IMG))
@@ -54,19 +55,26 @@ class Scraper:
         
         return image
     
-    def realtime_tts(self):
+    def realtime_info(self) -> dict:
         # REALTIME_URL:TTS(日本円→外貨)の値のXPath
         USD_TTS_PATH = '/html/body/div[1]/div/div/div[2]/main/article/div/div[1]/div/table/tbody/tr[1]/td[1]'
-        tts_element = WebDriverWait(self.driver, 10).until(lambda x: x.find_element(By.XPATH, USD_TTS_PATH))
-        
-        return tts_element.text
-    
-    def realtime_spread(self,tts_element_text):
+
         # TTB(外貨→日本円)
         USD_TTB_PATH = '/html/body/div[1]/div/div/div[2]/main/article/div/div[1]/div/table/tbody/tr[1]/td[2]'
+
+        # リアルタイムレートサイトにアクセス
+        self.driver.get(self.REALTIME_URL)
+        
+        tts_element = WebDriverWait(self.driver, 10).until(lambda x: x.find_element(By.XPATH, USD_TTS_PATH))
         ttb_element = WebDriverWait(self.driver, 10).until(lambda x: x.find_element(By.XPATH, USD_TTB_PATH))
-        tts = float(tts_element_text)
+
+        
+
+        tts = float(tts_element.text)
         ttb = float(ttb_element.text)
         spread = tts - ttb
-        return spread
+
+        return { 'tts':tts_element.text, 'spread': spread}
+    
+
     
